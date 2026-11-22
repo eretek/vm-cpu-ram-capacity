@@ -1,0 +1,48 @@
+{
+ "tests": [
+  {
+   "in": {
+    "cores": 32,
+    "ratio": 4,
+    "ram": 256,
+    "resv": 16,
+    "vms": "SQL01;8;64\nAPP;4;16;6\nDC01;2;8;2\nFILE01;4;24"
+   },
+   "v": {
+    "freeRam": 40,
+    "freeV": 88
+   }
+  },
+  {
+   "in": {
+    "cores": 24,
+    "ratio": 3,
+    "ram": 192,
+    "resv": 12,
+    "vms": "RDS;8;32;4\nSQL01;12;64\nDC01;2;8"
+   },
+   "v": {
+    "freeRam": -20,
+    "freeV": 26
+   }
+  },
+  {
+   "in": {
+    "cores": 8,
+    "ratio": 4,
+    "ram": 64,
+    "vms": "A;x;8"
+   },
+   "err": "vms"
+  },
+  {
+   "in": {
+    "cores": 8,
+    "ratio": 4,
+    "ram": 64,
+    "vms": "A;2;8;1.5"
+   },
+   "err": "vms"
+  }
+ ]
+}
